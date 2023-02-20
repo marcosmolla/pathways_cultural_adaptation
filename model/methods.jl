@@ -128,27 +128,6 @@ function selectionMF(S, INDPAY)
   end
 end
 
-# function fertilitySelection(S, INDPAY)
-#   # choose a random newborn
-#   local nb = sample(1:S["nod"]);
-#   # choose a parent relative to their payoff
-#   local p = wsample((1:S["nod"])[1:end .!= nb], INDPAY[1:end .!= nb]);
-#   return (nb,p)
-# end
-
-# # A function for mortality selection
-# function mortalitySelection(S, INDPAY)
-#   # choose newborn inversely realted to their payoff
-#   if all(INDPAY .== 1) 
-#     local nb = sample(1:S["nod"])
-#   else 
-#     local nb = wsample(1:S["nod"], 1 .- (INDPAY[:] ./ maximum(INDPAY)));
-#   end
-#   # choose parent relative to highest payoff
-#   local p = sample((1:S["nod"])[1:end .!= nb]);
-#   return (nb,p)
-# end
-
 # Simple innovation function that does not take own and others' knowledge into account
 function innovate_simple(S,INDREPNB)
   # Number of successful innovations
