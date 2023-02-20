@@ -1,2 +1,2 @@
-# pathways_cultural_adaptation
+# Code and Material for Pathways to Cultural Adaptation
 Code for Pathways to Cultural Adaptation manuscript
