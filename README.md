@@ -40,7 +40,7 @@ Furthermore, in the ESM we report results for simulations with
 
 To run the individual simulations you need to adjust the parameters in the `grid` array that is defined in `main.jl`.
 
-For **homogeneous environments**, set parameters 11 ($\sigma$) and 12 ($\tau$) to 0. They control the shape of the lognormal distribution and Lognormal(0,0)$=$ 1. For **heterogeneous environments** change the values of $\sigma$ and $\tau$ accordingly.
+For **homogeneous environments**, set parameters 11 ($\sigma$) and 12 ($\tau$) to 0. They control the shape of the lognormal distribution and Lognormal(0,0) = 1. For **heterogeneous environments** change the values of $\sigma$ and $\tau$ accordingly.
 
 To let $p_n$ and $p_r$ evolve, set parameter 13 to `true`. In this case, you might want to initialise the population with random values for $p_n$ and $p_r$, which you can do by setting parameters 8 and 9 to `1000`. To keep $p_n$ and $p_r$ fixed, set 8 and 9 to the preferred values and change 13 to `false`.
 
@@ -52,7 +52,7 @@ How selection works is determined by parameter 17, whereby `1` indicates mortali
 
 The mode of social learning contagion is controlled by parameter 15, whereby `true` indicates complex contagion, and `false` indicates simple contagion.
 
-To simulate learning on random graphs, set parameter 8 to `-1` (which sets up a fully connected network), and adjust parameter 14, which controls the number of randomly selected neighbours an individual can learn from, $k$ (where $k<N$).
+To simulate learning on random graphs, set parameter 8 to `-1` (which sets up a fully connected network), and adjust parameter 14, which controls the number of randomly selected neighbours an individual can learn from, $k$ (where $k < N$).
 
 The minimum fitness can be adjusted with parameter 16. And saturating payoffs (Michaelis-Menten model) can be turned on or off with parameter 18.
 
