@@ -6,8 +6,8 @@ Code for [Pathways to Cultural Adaptation](https://biorxiv.org/cgi/content/short
 
 The following files are found in the `model/` folder
 
-* `run.jl` initates julia simulations after loading methods from `methods.jl` and the job array specific parameters from `main.jl`
-* `summariseFiles_rout.R` opens all `*.Rdata` files from the output directory, summarises values, returns a summary file into the working directory (with the current setting it will create three files one with a general summary, one withj a record of all the individual repertoires, and one with all the time series data)
+* `run.jl` initiates julia simulations after loading methods from `methods.jl` and the job array specific parameters from `main.jl`
+* `summariseFiles_rout.R` opens all `*.Rdata` files from the output directory, summarises values, and returns a summary file into the working directory (with the current setting it will create three files one with a general summary, one with a record of all the individual repertoires, and one with all the time series data)
 
 The `figures/` folder contains `R` code to generate the figures of the main text. 
 
@@ -38,7 +38,9 @@ Furthermore, in the ESM we report results for simulations with
 4. Simple Contagion
 5. Fertility selection
 
-To run the individual simulations you need to adjust the parameters in the `grid` array that is defined in `main.jl`.
+To run the individual simulations you need to: 
+1. Adjust the parameters in the `grid` array that is defined in `main.jl`.
+2. Adjust the number of simulations accordingly in line 15 of `run.jl` (e.g. if you changed `grid` so that there will be in total 100 simulations, line 15 should read `for q in 1:100`)
 
 For **homogeneous environments**, set parameters 11 ($\sigma$) and 12 ($\tau$) to 0. They control the shape of the lognormal distribution and Lognormal(0,0) = 1. For **heterogeneous environments** change the values of $\sigma$ and $\tau$ accordingly.
 
